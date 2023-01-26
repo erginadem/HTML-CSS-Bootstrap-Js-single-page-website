@@ -1,0 +1,459 @@
+:root{
+    --color1: rgb(130, 97, 238);
+    --color2: rgb(255, 88, 158);
+    --color3: rgba(130, 97, 238, 0.95);
+    --color4: rgba(255, 88, 158, 0.95);
+    --color5: rgb(237, 237, 237);
+    --color6: rgb(157, 157, 157);
+    --color7: rgb(33, 33, 33);
+    --color8: rgba(130, 97, 238, 0.3);
+    --color9: rgba(255, 88, 158, 0.3);
+
+}
+
+/************************* COMMON *************************/
+
+body{
+    font-family: Raleway;
+}
+
+.btn{
+    border-radius: 3rem;
+    padding: 0.8rem 2rem;
+    text-transform: uppercase;
+}
+
+.btn-primary{
+    background-color: var(--color1);
+    border-color: var(--color1);
+}
+
+.btn-primary:hover {
+    background-color: var(--color2);
+    border-color: var(--color2);
+}
+
+.btn-secondary{
+    background-color: var(--color2);
+    border-color: var(--color2);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color1);
+    border-color: var(--color1);
+}
+
+
+.card{
+    border-radius: 3rem;
+    text-align: center;
+    border:0;
+    box-shadow: 0 0 10px var(--color5);
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+}
+
+.section-header{
+    margin:0 auto;
+    margin-bottom: 3rem;
+    width:60%;
+    text-align: center;    
+}
+
+.section-header h3{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-header.light{
+    color: var(--color5);
+}
+
+
+/************************* NAVBAR *************************/
+nav.main-navbar{
+    border-radius: 3rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px var(--color5);
+}
+
+nav.main-navbar .navbar-nav{
+    gap:1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+/*Burası bootstrap teki seçiciler
+Biz aynısını kullanarak bootstrap stilini ezdik
+*/
+.navbar-nav .nav-link.active, 
+.navbar-nav .show>.nav-link {
+    color: var(--color2);
+}
+
+/************************* CAROUSEL SLIDER *************************/
+
+.main-slider .carousel-item::before{
+    content: "";
+    background-image: linear-gradient(30deg, var(--color4), var(--color3));
+    position: absolute;
+    top:0; left:0; right:0; bottom: 0;
+    z-index: 5;
+}
+
+
+.main-slider .carousel-caption{
+    z-index: 6;
+    top:50%;
+    left:20%;
+    right:20%;
+    bottom: auto;
+    transform: translateY(-50%);
+}
+
+.main-slider .carousel-caption h2{
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+}
+
+.main-slider .carousel-caption p{
+    margin-bottom: 2rem;
+}
+
+
+/************************* HIGHLIGHTS *************************/
+.highlights{
+    transform: translateY(-50%);
+    position: relative;
+    z-index: 99;
+    margin-bottom: -7rem;
+}
+
+@media(max-width: 1200px){
+    .highlights{
+        transform: translateY(0);
+        margin-top:4rem;
+        margin-bottom:8rem;
+    }
+}
+
+.highlights .card{
+    height: 100%;
+}
+
+.highlights .card .card-body{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.highlights .card .icon{
+    background-color: var(--color1);
+    width:6rem;
+    height: 6rem;
+    font-size: 3rem;
+    padding:1rem;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: var(--color5);
+}
+
+.highlights .card h5{
+    font-weight: 600;
+}
+
+
+/************************* ABOUT US *************************/
+.about-us{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+}
+
+@media(max-width: 768px){
+    .about-us{
+        text-align: center;
+    }
+}
+
+.about-us .icon{
+    font-size: 15rem;
+    color: var(--color1);
+}
+
+.about-us .row:first-child{
+    padding-bottom: 10rem;
+    border-bottom: 1px solid var(--color5);
+}
+.about-us .row:last-child{
+    padding-top: 10rem;
+}
+
+.about-us h3{
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.about-us p{
+    color: var(--color6);
+    letter-spacing: 0.1rem;
+}
+
+
+/************************* WORK PROCESS *************************/
+
+
+.work-process{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    position: relative;
+    background-image: url("../img/banner-01.jpg");
+    margin-top:5rem;
+    
+}
+
+
+
+.work-process::after{
+    content: "";
+    background-image: linear-gradient(30deg, var(--color4), var(--color3));
+    position: absolute;
+    top:0; left:0; right:0; bottom: 0;
+    z-index: 1;
+}
+
+.work-process > .container{
+    position: relative;
+    z-index: 2;
+}
+
+.work-process .card{
+    box-shadow: 1rem 1rem 0 var(--color8);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.work-process .card:hover{
+    transform: scale(1.1);
+}
+
+.work-process .card i{
+    font-size: 3rem;
+    color: var(--color3);
+    margin-bottom: 1rem;
+}
+
+
+/************************* TESTIMONALS *************************/
+
+.testimonals{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.testimonals i{
+    font-size: 2rem;
+    color: var(--color3);
+    margin-bottom: 1rem;
+}
+
+.testimonals p{
+    color: var(--color6);
+}
+
+.testimonals .title{
+    color: var(--color2);
+}
+
+
+
+/************************* PRICING PLAN *************************/
+.pricing-plan{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-color: var(--color5);
+}
+
+.pricing-plan .card .card-body{
+    display: flex;
+    flex-direction: column;
+    gap:1.3rem;
+}
+
+.pricing-plan .price{
+    background-color: var(--color1);
+    border-radius: 20px;
+    padding: 1rem;
+    color: var(--color5)
+}
+
+.pricing-plan .col:nth-child(even) .price{
+    background-color: var(--color2);
+}
+
+.pricing-plan ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    color: var(--color6)
+}
+
+.pricing-plan ul li{
+    line-height: 2rem;
+}
+
+.pricing-plan ul li:last-child{
+    text-decoration: line-through;
+}
+
+.pricing-plan button{
+    align-self: center;
+}
+
+
+/************************* STATISTICS *************************/
+
+.statistics{
+    background-image: url("../img/banner-02.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    position: relative;
+    text-align: center;
+    color: var(--color5);
+}
+
+.statistics::after{
+    content: "";
+    background-image: linear-gradient(30deg, var(--color4), var(--color3));
+    position: absolute;
+    top:0; left:0; right:0; bottom: 0;
+    z-index: 1;
+}
+
+.statistics > .container{
+    position: relative;
+    z-index: 2;
+}
+
+.statistics h4{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.statistics span{
+    font-size: 0.9rem;
+}
+
+
+/************************* BLOG ENTRIES *************************/
+.blog-entries{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    text-align: center;
+}
+
+
+.blog-entries img{
+    width:100%;
+    height: auto;
+}
+
+.blog-entries [class^="col"]{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+
+.blog-entries [class^="col"] h3{
+    font-size: 1.2rem;
+}
+
+.blog-entries [class^="col"] p {
+    color: var(--color6);
+  }
+
+
+/************************* CONTACT *************************/
+.contact{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-color: var(--color5);
+}
+
+.contact .keep-in-touch{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.contact .keep-in-touch h3{
+    font-size: 1.3rem;
+}
+
+.contact .keep-in-touch p{
+    color: var(--color6);
+    line-height: 2rem;
+}
+
+.contact input,
+.contact textarea{
+    border-radius: 20px;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
+}
+
+.contact input:focus,
+.contact textarea:focus{
+    border-color: var(--color9);
+    box-shadow:var(--color9) 0px 0px 0px 0.25rem;
+}
+
+/************************* FOOTER *************************/
+
+.footer{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-image: linear-gradient(30deg, var(--color4), var(--color3));
+    text-align: center;
+}
+
+.footer ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+}
+
+.footer ul a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:2.5rem;
+    height:2.5rem;
+    background-color: var(--color5);
+    border-radius: 2rem;
+    text-decoration: none;
+    color: var(--color1);
+    transition: transform 0.3s;
+}
+
+.footer ul i{
+    font-size: 1.3rem;
+}
+
+.footer ul a:hover{
+    transform: scale(1.2) rotate(360deg);
+
+}
